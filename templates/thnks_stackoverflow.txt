@@ -1,0 +1,21 @@
+#i use javscript function for delaying home gif, doesnt know about js but stackoverflow helped me
+#modified a lot for getting effect.
+
+<html> 
+  <head> 
+    <title>Hide Text demo</title> 
+    <script type="text/javascript" src="http://code.jquery.com/jquery.min.js"></script>
+    <script type="text/javascript"> 
+      $(document).ready( function() {
+        $('#texttohide').delay(5000).fadeOut();
+      });
+    </script>
+  </head> 
+  <body> 
+    <div id="texttohide"> Text to hide in 5 seconds </div> 
+  </body> 
+</html>
+
+#sourcecode from stackoverflow...
+credits: stackoverflow.
+finally by:Rohit Dev's Community

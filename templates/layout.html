@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+		<meta name="description" content="">
+		<meta name="author" content="">
+		<link rel="icon" type="image/png" href="{{url_for('static', filename='images/favicon_image.jpg')}}">
+		<title>Prasad Electrical & Plumbing Works|</title>
+		<!-- Bootstrap core CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+		<!-- Custom styles for this template -->
+		<link href="{{url_for('static', filename='css/style.css')}}" rel="stylesheet">
+		<!-- hiding home gif for 5 sec -->
+		<script type="text/javascript" src="http://code.jquery.com/jquery.min.js"></script>
+		<script type="text/javascript">
+      $(document).ready( function() {
+        $('#texttohide').delay(6000).fadeOut();
+      });
+    </script>
+	<!-- validating form credentials-->
+	<script type="text/javascript">
+	function validateForm(){
+		var x = document.forms.["sentMessage"].["name", "email", "mobilenumber", "message"].value;
+		if(x==""){
+			alert('Please fill the credentials!');
+			return false;
+		}
+	}
+
+	</script>
+	</head>
+	<body id="page-top">
+		<!-- Navigation -->
+		<nav class="navbar navbar-default">
+			<div class="container">
+				<!-- Brand and toggle get grouped for better mobile display -->
+				<div class="navbar-header page-scroll">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand page-scroll" href="#page-top"><img src="{{url_for('static', filename='images/logo.png')}}" alt="Prasad Electricals logo"></a>
+				</div>
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav navbar-right">
+						<li class="hidden">
+							<a href="#page-top"></a>
+						</li>
+						<li>
+							<a class="page-scroll" href="#about">About</a>
+						</li>
+						<li>
+							<a class="page-scroll" href="#services">Services</a>
+						</li>
+						<li>
+							<a class="page-scroll" href="#contact">Contact</a>
+						</li>
+					</ul>
+				</div>
+				<!-- /.navbar-collapse -->
+			</div>
+			<!-- /.container-fluid -->
+		</nav>
+        <div class="container">
+            {% include 'includes/_messages.html' %}
+            {% block body %}{% endblock %}
+        </div>
+
+        <footer>
+			<div class="container text-center">
+				<p>Designed & Maintained by <a href="http://itsmeeerohit.coolpage.biz"><span>ROHIT BURUGA</span> Dev's Community</a></p>
+			</div>
+		</footer>
+
+		<!-- Modal for portfolio item 1 -->
+		<div class="modal fade" id="Modal-1" tabindex="-1" role="dialog" aria-labelledby="Modal-label-1">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title" id="Modal-label-1">Home Services</h4>
+					</div>
+					<div class="modal-body">
+						<img src="{{url_for('static', filename='images/demo/portfolio-1.jpg')}}" alt="img01" class="img-responsive" />
+						<div class="modal-works"><span>House-Hold Repairs</span><span>Tiny Repairs, Huge Repairs</span></div>
+						<p>Every home needs an electrician, 12[hours]/6[days] Customer Support.</p>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Modal for portfolio item 2 -->
+		<div class="modal fade" id="Modal-2" tabindex="-1" role="dialog" aria-labelledby="Modal-label-2">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title" id="Modal-label-2">Plumbing Works</h4>
+					</div>
+					<div class="modal-body">
+						<img src="{{url_for('static', filename='images/demo/portfolio-2.jpg')}}" alt="img01" class="img-responsive" />
+						<div class="modal-works"><span>Tiny Repairs</span><span>Huge Repairs</span></div>
+						<p>Anyone who has faced a busted pipe or broken toilet can  tell to us. We install and repair water supply lines, waste disposal systems, and related appliances and fixtures to keep homes and businesses flowing smoothly.</p>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Modal for portfolio item 3 -->
+		<div class="modal fade" id="Modal-3" tabindex="-1" role="dialog" aria-labelledby="Modal-label-3">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title" id="Modal-label-3">House-Wiring</h4>
+					</div>
+					<div class="modal-body">
+						<img src="{{url_for('static', filename='images/demo/portfolio-3.jpg')}}" alt="img01" class="img-responsive" />
+						<div class="modal-works"><span>Newly & Already Constructed homes needs brightful view.</div>
+						<p>As a electrician, in our aspect we suggest you appliances what is best to your home.</p>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+		<!-- Bootstrap core JavaScript
+			================================================== -->
+		<!-- Placed at the end of the document so the pages load faster -->
+		<script src="{{url_for('static', filename='js/SmoothScroll.js')}}"></script>
+		<script src="{{url_for('static', filename='js/theme-scripts.js')}}"></script>
+	</body>
